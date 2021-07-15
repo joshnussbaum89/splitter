@@ -7,12 +7,18 @@ const BillStyles = styled.div`
     color: var(--darkCyan);
     text-align: right;
     font-size: var(--large);
-    font-weight: 700;
     width: 97%;
     margin: 1rem 0;
-    padding: 0.5rem;
-    border: none;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--lighterGrayishCyan);
     border-radius: 5px;
+    ::placeholder {
+      color: var(--darkerGrayishCyan);
+    }
+    :focus {
+      outline: none;
+      border: 2px solid var(--strongCyan);
+    }
   }
 `;
 
@@ -20,7 +26,7 @@ const Bill = () => {
   return (
     <BillStyles>
       <h2>Bill</h2>
-      <input type='text' />
+      <input type='text' placeholder='140.42' autoFocus />
     </BillStyles>
   );
 };
